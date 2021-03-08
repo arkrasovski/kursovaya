@@ -22,10 +22,34 @@ body {
 
 .time {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  margin: 5px 0;
+  align-items: center;
 }
-#timer_content {
-  float: right;
+#minutes,
+#hours {
+  font-size: 25px;
 }
+.clock {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  align-items: center;
+}
+.clock > div {
+  width: 50px;
+  height: 60px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 45px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+  font-weight: bold;
+}
+
 .header {
   color: #fff;
   padding: 20px 5%;
@@ -67,7 +91,7 @@ body {
 }
 .nav_item {
   padding: 10px 30px;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
 }
 .nav_item a {
@@ -329,8 +353,18 @@ dot:hover {
   margin-left: 1%;
   display: none;
 }
+.tab_content h3 {
+  font-size: 20px;
+}
+.tab_content_wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 3;
+}
+
 .tab_content.active {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 .tab_content_image {
@@ -399,13 +433,8 @@ dot:hover {
   transition: opacity 0.3s ease 0.2s;
 }
 li {
-  margin: 0;
-  display: flex;
-  align-items: center;
   list-style: none;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 20px;
+  margin-bottom: 3px;
 }
 li span {
   margin-right: 5px;
@@ -419,7 +448,7 @@ li span {
     font-size: 55px;
   }
   .nav_item {
-    padding: 10px 30px;
+    padding: 10px 25px;
     font-size: 15px;
   }
   .submenu {
@@ -435,7 +464,7 @@ li span {
 }
 @media screen and (max-width: 1400px) and (min-width: 1300px) {
   .nav_item {
-    padding: 10px 24px;
+    padding: 10px 20px;
   }
 }
 @media screen and (max-width: 1300px) and (min-width: 1200px) {
@@ -453,7 +482,7 @@ li span {
 
   .nav_item {
     padding: 7px 15px;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .submenu {
@@ -498,7 +527,7 @@ li span {
   }
 
   .submenu a {
-    font-size: 10px;
+    font-size: 15px;
     line-height: 20px;
   }
 
@@ -540,12 +569,12 @@ li span {
   }
 
   .submenu a {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 20px;
   }
 
   .poisk {
-    width: 250px;
+    width: 200px;
     height: 20px;
   }
 
@@ -559,12 +588,6 @@ li span {
   .footer1 {
     font-size: 10px;
     padding: 5px 5%;
-  }
-
-  li {
-    margin: 0;
-    padding: 0px 0 5px 20px;
-    background-size: 15px;
   }
 
   .messangers {
@@ -589,7 +612,7 @@ li span {
 
   .nav_item {
     padding: 5px 7px;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .submenu {
@@ -597,7 +620,7 @@ li span {
     width: 150px;
   }
   .submenu a {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 20px;
   }
   .poisk {
@@ -616,13 +639,6 @@ li span {
     font-size: 10px;
     padding: 5px 5%;
   }
-
-  li {
-    margin: 0;
-    padding: 0px 0 5px 20px;
-    background-size: 15px;
-  }
-
   .messangers {
     height: 30px;
   }
@@ -657,17 +673,17 @@ li span {
   }
 
   .submenu a {
-    font-size: 10px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   .poisk {
-    width: 130px;
-    height: 15px;
+    width: 150px;
+    height: 20px;
   }
-
   input[type="image"] {
-    width: 15px;
+    height: 20px;
+    width: 20px;
   }
   .content {
     display: flex;
@@ -735,17 +751,25 @@ li span {
     padding: 5px 5%;
   }
 
-  li {
-    margin: 0;
-    padding: 0px 0 5px 20px;
-    background-size: 15px;
-  }
-
   .messangers {
     height: 30px;
   }
 }
 @media screen and (max-width: 700px) and (min-width: 500px) {
+  .greeting {
+    font-size: 15px;
+  }
+  .clock > div {
+    height: 40px;
+    width: 30px;
+  }
+  .clock {
+    width: 70px;
+  }
+  #hours,
+  #minutes {
+    font-size: 20px;
+  }
   #timer_content {
     font-size: 10px;
   }
@@ -764,6 +788,13 @@ li span {
 
   .gymnasium {
     font-size: 25px;
+  }
+  .poisk {
+    width: 150px;
+  }
+  input[type="image"] {
+    height: 20px;
+    width: 20px;
   }
   .content {
     display: flex;
@@ -832,17 +863,25 @@ li span {
     padding: 5px 5%;
   }
 
-  li {
-    margin: 0;
-    padding: 0px 0 5px 15px;
-    background-size: 10px;
-  }
-
   .messangers {
     height: 30px;
   }
 }
 @media screen and (max-width: 500px) and (min-width: 400px) {
+  .greeting {
+    font-size: 10px;
+  }
+  .clock > div {
+    height: 30px;
+    width: 20px;
+  }
+  .clock {
+    width: 50px;
+  }
+  #hours,
+  #minutes {
+    font-size: 15px;
+  }
   #timer_content {
     font-size: 7px;
   }
@@ -861,6 +900,13 @@ li span {
 
   .gymnasium {
     font-size: 20px;
+  }
+  .poisk {
+    width: 120px;
+  }
+  input[type="image"] {
+    height: 20px;
+    width: 20px;
   }
   .content {
     display: flex;
@@ -933,20 +979,27 @@ li span {
     font-size: 7px;
     padding: 5px 5%;
   }
-  li {
-    margin: 0;
-    padding: 0px 0 5px 15px;
-    background-size: 10px;
-  }
-
   .messangers {
     height: 30px;
   }
 }
-
+div {
+  border: 1px solid black;
+}
 @media screen and (max-width: 400px) and (min-width: 200px) {
-  #timer_content {
-    font-size: 7px;
+  .greeting {
+    font-size: 10px;
+  }
+  .clock > div {
+    height: 30px;
+    width: 20px;
+  }
+  .clock {
+    width: 50px;
+  }
+  #hours,
+  #minutes {
+    font-size: 15px;
   }
   .header img {
     width: 70px;
@@ -963,7 +1016,13 @@ li span {
   .gymnasium {
     font-size: 15px;
   }
-
+  .poisk {
+    width: 100px;
+  }
+  input[type="image"] {
+    height: 20px;
+    width: 20px;
+  }
   .content {
     display: flex;
     flex-direction: column-reverse;
@@ -1037,11 +1096,6 @@ li span {
     padding: 5px 5%;
   }
 
-  li {
-    margin: 0;
-    padding: 0px 0 5px 15px;
-    background-size: 10px;
-  }
   .messangers {
     height: 30px;
   }
@@ -1071,8 +1125,22 @@ li span {
 }
 
 @media screen and (max-width: 800px) {
+  .nav_section2 {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 5%;
+  }
+  .nav_item2 {
+    height: 35px;
+    padding: 0;
+  }
+  .poisk {
+    height: 20px;
+  }
+
   .nav {
-    position: static;
+    position: relative;
     display: block;
   }
   .nav_item {
@@ -1149,13 +1217,13 @@ li span {
   .submenu a {
     display: block;
     font-size: 10px;
-    line-height: 20px;
+    line-height: 10px;
   }
 
   .nav_item label.toogleSubmenu .icon-angle-down-solid,
   .icon-angle-up-solid {
     /*Стрелочка вниз*/
-    width: 15px;
+    font-size: 10px;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -1163,9 +1231,6 @@ li span {
     color: #fff;
   }
   .nav_item label.toogleSubmenu .icon-angle-up-solid {
-    display: none;
-  }
-  .nav_item2 {
     display: none;
   }
 }
