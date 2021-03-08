@@ -9,6 +9,7 @@ a {
 html,
 body {
   height: 100%;
+  background-color: #eee;
 }
 
 .main_container {
@@ -27,6 +28,7 @@ body {
   font-size: 25px;
   margin: 5px 0;
   align-items: center;
+  font-family: "Inter", sans-serif;
 }
 #minutes,
 #hours {
@@ -50,12 +52,13 @@ body {
   font-weight: bold;
 }
 
-.header {
+header {
   color: #fff;
   padding: 20px 5%;
   display: flex;
   background-color: #4cd1e3;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 .header_text {
   margin-left: 20px;
@@ -71,10 +74,10 @@ body {
   font-size: 60px;
   font-weight: bold;
 }
-.header img {
+header img {
   width: 170px;
 }
-.nav {
+nav {
   z-index: 2;
   position: sticky;
   top: -1;
@@ -84,6 +87,7 @@ body {
   padding: 0 5%;
   justify-content: space-between;
   background-color: #009fb1;
+  font-family: "Inter", sans-serif;
 }
 
 .nav_section {
@@ -104,7 +108,8 @@ body {
   flex-direction: column;
   max-height: 1000px;
   transition: max-height 0.5s ease-in;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #eee;
+  visibility: visible;
 }
 
 .submenu {
@@ -117,6 +122,8 @@ body {
   width: 250px;
   transition: max-height 0.3s ease;
   z-index: 2;
+  border: 1px solid #eee;
+  visibility: hidden;
 }
 
 .submenu a {
@@ -160,9 +167,10 @@ input[type="image"] {
 }
 .content {
   flex: 1 0 auto;
-  padding: 15px 5%;
+  padding: 15px 0;
   display: flex;
   background-color: #eee;
+  font-family: "Inter", sans-serif;
 }
 .leftbar {
   width: 20%;
@@ -406,9 +414,10 @@ dot:hover {
   height: 500px;
 }
 /*футер*/
-.footer_main {
+footer {
   flex: 0 0 auto;
   color: #e3e3e3;
+  font-family: "Inter", sans-serif;
 }
 .footer1 {
   padding: 20px 5% 20px 5%;
@@ -468,7 +477,7 @@ li span {
   }
 }
 @media screen and (max-width: 1300px) and (min-width: 1200px) {
-  .header img {
+  header img {
     width: 150px;
   }
 
@@ -501,10 +510,13 @@ li span {
   .youtube iframe {
     height: 200px;
   }
+  footer {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1100px) {
-  .header img {
+  header img {
     width: 150px;
   }
 
@@ -598,7 +610,7 @@ li span {
   #timer_content {
     font-size: 15px;
   }
-  .header img {
+  header img {
     width: 130px;
   }
 
@@ -644,10 +656,21 @@ li span {
   }
 }
 @media screen and (max-width: 900px) and (min-width: 700px) {
-  #timer_content {
-    font-size: 13px;
+  .greeting {
+    font-size: 15px;
   }
-  .header img {
+  .clock > div {
+    height: 40px;
+    width: 30px;
+  }
+  .clock {
+    width: 70px;
+  }
+  #hours,
+  #minutes {
+    font-size: 20px;
+  }
+  header img {
     width: 100px;
   }
   .header_text {
@@ -740,14 +763,11 @@ li span {
     min-height: 300px;
   }
 
-  .tab_content_text h3 {
-    font-size: 25px;
-  }
   .youtube iframe {
     height: 300px;
   }
   .footer1 {
-    font-size: 10px;
+    font-size: 8px;
     padding: 5px 5%;
   }
 
@@ -773,7 +793,7 @@ li span {
   #timer_content {
     font-size: 10px;
   }
-  .header img {
+  header img {
     width: 100px;
   }
 
@@ -851,15 +871,15 @@ li span {
   .tab_content {
     min-height: 300px;
   }
-  .tab_content_text h3 {
-    font-size: 25px;
+  .tab_content h3 {
+    font-size: 20px;
   }
 
   .youtube iframe {
     height: 300px;
   }
   .footer1 {
-    font-size: 7px;
+    font-size: 6px;
     padding: 5px 5%;
   }
 
@@ -885,7 +905,7 @@ li span {
   #timer_content {
     font-size: 7px;
   }
-  .header img {
+  header img {
     width: 100px;
   }
 
@@ -961,7 +981,7 @@ li span {
   .tab_content {
     min-height: 200px;
   }
-  .tab_content_text h3 {
+  .tab_content h3 {
     font-size: 15px;
   }
   .tab_content_text_message {
@@ -976,16 +996,14 @@ li span {
     height: 200px;
   }
   .footer1 {
-    font-size: 7px;
+    font-size: 5px;
     padding: 5px 5%;
   }
   .messangers {
     height: 30px;
   }
 }
-div {
-  border: 1px solid black;
-}
+
 @media screen and (max-width: 400px) and (min-width: 200px) {
   .greeting {
     font-size: 10px;
@@ -1001,7 +1019,7 @@ div {
   #minutes {
     font-size: 15px;
   }
-  .header img {
+  header img {
     width: 70px;
   }
 
@@ -1074,8 +1092,8 @@ div {
   .tab_content {
     min-height: 200px;
   }
-  .tab_content_text h3 {
-    font-size: 15px;
+  .tab_content h3 {
+    font-size: 10px;
   }
   .tab_content_text_message {
     font-size: 10px;
@@ -1092,7 +1110,7 @@ div {
     height: 250px;
   }
   .footer1 {
-    font-size: 7px;
+    font-size: 4px;
     padding: 5px 5%;
   }
 
@@ -1102,10 +1120,10 @@ div {
 }
 
 /*Адаптивное меню*/
-.nav input[type="checkbox"] {
+nav input[type="checkbox"] {
   display: none;
 } /*Убрать чекбоксы*/
-.nav label.toogleMenu {
+nav label.toogleMenu {
   /*Текст "меню"*/
   background: #009fb1;
   color: #fff;
@@ -1116,7 +1134,7 @@ div {
   position: relative;
   display: none;
 }
-.nav label.toogleMenu .icon-align-justify-solid {
+nav label.toogleMenu .icon-align-justify-solid {
   /*Три полоски*/
   position: absolute;
   top: 10px;
@@ -1128,7 +1146,7 @@ div {
   .nav_section2 {
     float: right;
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 5%;
   }
   .nav_item2 {
@@ -1139,7 +1157,7 @@ div {
     height: 20px;
   }
 
-  .nav {
+  nav {
     position: relative;
     display: block;
   }
@@ -1161,7 +1179,7 @@ div {
     transition: max-height 0.3s ease 0.2s; /*анимация*/
     overflow: hidden; /*прячу чтобы не вылазил контент*/
   }
-  .nav label.toogleMenu {
+  nav label.toogleMenu {
     display: block;
   }
   input.toogleMenu:checked + label.toogleMenu {
@@ -1177,6 +1195,7 @@ div {
     position: relative;
     max-height: 5000px;
     transition: max-height 2s ease-in;
+    visibility: visible;
   }
   input.toogleSubmenu:checked ~ .submenu {
     /*Отступ для подменю*/
@@ -1212,6 +1231,7 @@ div {
     overflow: hidden;
     top: 0px;
     background-color: #fff;
+    border: 0;
     transition: max-height 0.3s ease;
   }
   .submenu a {
