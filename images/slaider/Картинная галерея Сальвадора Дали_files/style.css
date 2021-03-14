@@ -1,0 +1,102 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #999;
+  background: #f0eaee;
+}
+
+header {
+  background: #b8999f;
+  width: 100%;
+  height: 158px;
+}
+h1 {
+  font-size: 450%;
+  font-weight: bold;
+  padding: 15px 20px 0;
+  font-family: "Caveat", cursive;
+}
+
+.description {
+  padding: 0 24px 0;
+  font-family: "Jura", sans-serif;
+}
+
+.paint_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.paint_wrapper > div {
+  width: 50%;
+}
+
+.left_paint,
+.right_paint {
+  display: flex;
+  width: 45%;
+}
+.left_paint a img,
+.right_paint a img {
+  width: 100%;
+}
+
+.blocktext {
+  margin-left: 10px;
+  font-size: 1vw;
+}
+
+div {
+  border: 1px solid black;
+}
+#text {
+  width: 100%;
+  background: #f0eaee;
+  padding: 20px 5%;
+}
+
+.blockpaint {
+  margin: 50px 8.5%;
+  height: 25%;
+  width: 50%;
+  color: #4a7079;
+}
+
+.blockpaint img {
+  float: left;
+  margin-right: 30px;
+  width: 700px;
+}
+.buttons {
+  height: 2%;
+  width: 83%;
+  margin: 50px 8.5% 0 8.5%;
+  border-bottom: 1px solid black;
+}
+.button1 {
+  height: 100%;
+
+  float: left;
+}
+.button2 {
+  height: 100%;
+
+  float: right;
+}
+footer {
+  text-align: center;
+  border-top: 1px solid black;
+  height: 40px;
+
+  background: #b8999f;
+  font-size: 15px;
+}
